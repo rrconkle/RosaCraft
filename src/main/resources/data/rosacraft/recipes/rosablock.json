@@ -8,10 +8,10 @@
   ],
   "key": {
     "#": {
-      "item": "testmod:rosa"
+      "item": "rosacraft:rosa"
     }
   },
   "result": {
-    "item": "testmod:rosablock"
+    "item": "rosacraft:rosablock"
   }
 }

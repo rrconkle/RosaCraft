@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "rosacraft:block/pepperblock" },
+    "facing=east": { "model": "rosacraft:block/pepperblock", "y": 90 },
+    "facing=south": { "model": "rosacraft:block/pepperblock", "y": 180 },
+    "facing=west": { "model": "rosacraft:block/pepperblock", "y": 270 }
+  }
+}

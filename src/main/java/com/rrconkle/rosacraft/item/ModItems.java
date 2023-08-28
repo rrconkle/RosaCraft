@@ -1,6 +1,6 @@
-package com.example.example_mod.item;
+package com.rrconkle.rosacraft.item;
 
-import com.example.example_mod.TestMod;
+import com.rrconkle.rosacraft.rosacraft;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
@@ -13,6 +13,7 @@ import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 public class ModItems {
 	public static final Item TESTITEM = registerItem("testitem", new Item(new QuiltItemSettings()));
 	public static final Item ROSA = registerItem("rosa", new Item(new QuiltItemSettings()));
+	public static final Item PEPPER = registerItem("pepper", new Item(new QuiltItemSettings()));
 	//public static final Item ROSABLOCK = registerItem("rosa_block", new Item(new QuiltItemSettings()));
 	private static void addItemsToIngrediantItemGroup(FabricItemGroupEntries entries) {
 		//entries.addItem(TESTITEM);
@@ -20,10 +21,10 @@ public class ModItems {
 	}
 
 	private static Item registerItem(String name, Item item) {
-		return Registry.register(Registries.ITEM, new Identifier(TestMod.MOD_ID, name), item);
+		return Registry.register(Registries.ITEM, new Identifier(rosacraft.MOD_ID, name), item);
 	}
 	public static void registerModItems() {
-		TestMod.LOGGER.info("Registering Mod Items " + TestMod.MOD_ID);
+		rosacraft.LOGGER.info("Registering Mod Items " + rosacraft.MOD_ID);
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngrediantItemGroup);
 	}
 }

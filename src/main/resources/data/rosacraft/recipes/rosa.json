@@ -3,11 +3,11 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "testmod:rosablock"
+      "item": "rosacraft:rosablock"
     }
   ],
   "result": {
     "count": 9,
-    "item": "testmod:rosa"
+    "item": "rosacraft:rosa"
   }
 }

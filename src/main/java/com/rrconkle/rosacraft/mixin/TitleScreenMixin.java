@@ -1,6 +1,6 @@
-package com.example.example_mod.mixin;
+package com.rrconkle.rosacraft.mixin;
 
-import com.example.example_mod.TestMod;
+import com.rrconkle.rosacraft.rosacraft;
 import net.minecraft.client.gui.screen.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class TitleScreenMixin {
 	@Inject(method = "init", at = @At("TAIL"))
 	public void onInit(CallbackInfo ci) {
-		TestMod.LOGGER.info("This line is printed by an example mod mixin!");
+		rosacraft.LOGGER.info("This line is printed by an example mod mixin!");
 	}
 }
