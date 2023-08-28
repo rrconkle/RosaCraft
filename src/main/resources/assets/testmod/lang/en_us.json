@@ -1,0 +1,7 @@
+{
+  "item.testmod.testitem": "TestItem",
+  "item.testmod.rosa": "Rosa",
+  "itemgroup.rosagroup": "Rosa",
+  "block.testmod.rosablock": "Rosa Block",
+  "block.testmod.testblock": "Test Block"
+}
