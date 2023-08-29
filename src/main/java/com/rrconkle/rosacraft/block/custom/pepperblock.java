@@ -2,12 +2,17 @@ package com.rrconkle.rosacraft.block.custom;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
 import org.jetbrains.annotations.Nullable;
 
 public class pepperblock extends Block {
@@ -35,5 +40,9 @@ public class pepperblock extends Block {
 	@Override
 	protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
 		builder.add(FACING);
+	}
+	@Override
+	public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
+		return VoxelShapes.cuboid(0.1875f, 0f, 0.1875f, .8125f, .5f, 0.8125f);
 	}
 }

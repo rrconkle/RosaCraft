@@ -15,7 +15,7 @@ import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 public class ModBlocks {
 	public static final Block ROSABLOCK = registerBlock("rosablock", new Block(QuiltBlockSettings.copyOf(Blocks.DIRT)));
 	public static final Block TESTBLOCK = registerBlock("testblock", new Block(QuiltBlockSettings.copyOf(Blocks.COBBLESTONE)));
-	public static final Block PEPPER_BLOCK = registerBlock("pepperblock", new pepperblock(QuiltBlockSettings.copyOf(Blocks.CAKE).opaque(false)));
+	public static final Block PEPPER_BLOCK = registerBlock("pepperblock", new pepperblock(QuiltBlockSettings.copyOf(Blocks.PUMPKIN).opaque(false)));
 	private static Block registerBlock(String name, Block block) {
 		registerBlockItem(name, block);
 		return Registry.register(Registries.BLOCK, new Identifier(rosacraft.MOD_ID, name), block);
