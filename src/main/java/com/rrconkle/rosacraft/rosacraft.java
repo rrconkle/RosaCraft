@@ -1,10 +1,13 @@
 package com.rrconkle.rosacraft;
 
 import com.rrconkle.rosacraft.block.ModBlocks;
+import com.rrconkle.rosacraft.command.yay;
 import com.rrconkle.rosacraft.item.ModItemGroups;
 import com.rrconkle.rosacraft.item.ModItems;
+import com.rrconkle.rosacraft.util.ModRegistries;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
+import org.quiltmc.qsl.command.api.client.ClientCommandRegistrationCallback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,5 +24,9 @@ public class rosacraft implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
+		ModRegistries.registerModStuff();
+		//ClientCommandRegistrationCallback.EVENT.register(yay::registerCommands);
+
 	}
+
 }
